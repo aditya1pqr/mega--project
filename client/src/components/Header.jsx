@@ -25,12 +25,12 @@ export default function Header() {
   }, [location.search]);
 
   return (
-    <header className='bg-slate-200 shadow-md'>
+    <header className='bg-slate-800 shadow-md rounded'>
          <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
          <Link to='/'>
          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-slate-500'>Sahand</span>
-            <span className='text-slate-700'>Estate</span>
+            <span className='text-orange-600 sm:text-[30px]'>Real</span>
+            <span className='text-white sm:text-[30px]'>Estate</span>
           </h1>
         </Link>
         <form
@@ -39,8 +39,8 @@ export default function Header() {
         >
         <input
             type='text'
-            placeholder='Search...'
-            className='bg-transparent focus:outline-none w-24 sm:w-64'
+            placeholder='Search . . . . . . .'
+            className='bg-transparent focus:outline-none w-24 sm:w-64 sm:text-[20px]'
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
 
@@ -51,12 +51,12 @@ export default function Header() {
         </form>
         <ul className='flex gap-4'>
           <Link to='/'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline text-white sm:text-[20px] hover:underline hover:text-orange-400'>
               Home
             </li>
           </Link>
           <Link to='/about'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline text-white hover:underline sm:text-[20px] hover:text-orange-400'>
               About
             </li>
           </Link>
@@ -69,7 +69,7 @@ export default function Header() {
                 alt='profile'
               />
             ) : (
-              <li className=' text-slate-700 hover:underline'> Sign in</li>
+              <li className='text-white hover:underline sm:text-[20px] hover:text-orange-400'> Sign in</li>
             )}
           </Link>
           </ul>
